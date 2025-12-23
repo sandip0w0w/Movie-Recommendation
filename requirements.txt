@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn  # This is the package for all sklearn imports (e.g., train_test_split, LogisticRegression)
+statsmodels
+kagglehub
+plotly
+scipy
+rapidfuzz
