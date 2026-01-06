@@ -17,7 +17,7 @@ def load_and_preprocess():
 
 
 @st.cache_data
-def user_item_matrix(df):
+def item_user_matrix(df):
 
     pivot = df.pivot(index = ['movieId'], columns = ['userId'], values = 'rating').fillna(0)
 
@@ -70,7 +70,7 @@ def movie_recommender_engine(movie_name, pivot, matrix, model, n_recs, movies_df
 
 
 movies,rating = load_and_preprocess()
-pivot, matrix = user_item_matrix(rating)
+pivot, matrix = item_user_matrix(rating)
 model = model_fitting(matrix)
 n_recs = 10
 
